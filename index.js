@@ -22,10 +22,20 @@ const {
   DEPLOYER_PRIVATE_KEY,
   NFT_STORAGE_KEY,
 } = process.env
+console.log('🚀 ~ NFT_STORAGE_KEY:', NFT_STORAGE_KEY)
+console.log('🚀 ~ DEPLOYER_PRIVATE_KEY:', DEPLOYER_PRIVATE_KEY)
+console.log('🚀 ~ RAFT_OPTIMISM:', RAFT_OPTIMISM)
+console.log('🚀 ~ RAFT_OPTIMISM_GOERLI:', RAFT_OPTIMISM_GOERLI)
+console.log('🚀 ~ RAFT_GOERLI:', RAFT_GOERLI)
+console.log('🚀 ~ ALCHEMY_OPTIMISM_GOERLI:', ALCHEMY_OPTIMISM_GOERLI)
+console.log('🚀 ~ ALCHEMY_OPTIMISM:', ALCHEMY_OPTIMISM)
+console.log('🚀 ~ ALCHEMY_GOERLI:', ALCHEMY_GOERLI)
 
 app.post('/create-raft', async (req, res) => {
   try {
     const { name, recipient, network } = req.body
+    console.log('🚀 ~ app.post ~ recipient:', recipient)
+    console.log('🚀 ~ app.post ~ name:', name)
     console.log('🚀 ~ app.post ~ network:', network)
     const metadata = {
       name,
